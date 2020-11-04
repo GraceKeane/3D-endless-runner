@@ -51,7 +51,7 @@ public class groundTile : MonoBehaviour
         }
 
         // Ensures diamonds are same height
-        point.y = 3f;
+        point.y = 0.4f;
         return point;
     }
 
