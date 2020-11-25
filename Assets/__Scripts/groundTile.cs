@@ -12,6 +12,7 @@ public class groundTile : MonoBehaviour
     {
         gs = GameObject.FindObjectOfType<GroundSpawn>();  
         SpawnDiamonds();  
+        SpawnObstacle();
     }
 
     private void OnTriggerExit (Collider other)
@@ -59,5 +60,14 @@ public class groundTile : MonoBehaviour
     void Update()
     {
         
+    }
+/////////
+    public GameObject obstaclePrefab; 
+
+    void SpawnObstacle()
+    {
+        int obstacleSpawnIndex = Random.Range(4, 7);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 }

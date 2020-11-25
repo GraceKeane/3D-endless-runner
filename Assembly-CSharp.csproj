@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{e3c60638-e97b-b86f-ad9e-5fd8792c0b58}</ProjectGuid>
+    <ProjectGuid>{a0cf25dc-35d8-557d-cd28-00c8511c16d3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -74,11 +74,13 @@
      <Compile Include="Assets\__Scripts\CameraFollow.cs" />
      <Compile Include="Assets\__Scripts\GameManager.cs" />
      <Compile Include="Assets\__Scripts\GroundSpawn.cs" />
+     <Compile Include="Assets\__Scripts\Jump.cs" />
      <Compile Include="Assets\__Scripts\LifeController.cs" />
      <Compile Include="Assets\__Scripts\Lives.cs" />
      <Compile Include="Assets\__Scripts\PDiamond.cs" />
      <Compile Include="Assets\__Scripts\PinballFollow.cs" />
      <Compile Include="Assets\__Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\__Scripts\Timer.cs" />
      <Compile Include="Assets\__Scripts\groundTile.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -635,67 +637,67 @@
         <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/Grace Keane/Documents/Mobile Applications Development/3DGameG00359990/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/Grace Keane/Desktop/MAD/3DEndlessRunner/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
