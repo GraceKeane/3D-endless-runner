@@ -7,12 +7,16 @@ public class groundTile : MonoBehaviour
     GroundSpawn gs;
     Vector3 nextSpawnPoint;
 
+    public float secondsBetweenSpawn;
+    public float elapsedTime = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
         gs = GameObject.FindObjectOfType<GroundSpawn>();  
         SpawnDiamonds();  
         SpawnObstacle();
+        SpawnSpringObstacle();
     }
 
     private void OnTriggerExit (Collider other)
@@ -59,15 +63,27 @@ public class groundTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         
     }
-/////////
+
+    /*
+        Spawning obstacles
+    */
     public GameObject obstaclePrefab; 
+    public GameObject springObstaclePrefab;
 
     void SpawnObstacle()
     {
         int obstacleSpawnIndex = Random.Range(4, 7);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-        Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
+        Instantiate(obstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
     }
-}
+
+    void SpawnSpringObstacle()
+    {   
+        int obstacleSpawnIndex = Random.Range(7, 8);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        Instantiate(springObstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
+    
+
+}}
