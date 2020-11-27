@@ -15,14 +15,14 @@ public class groundTile : MonoBehaviour
     {
         gs = GameObject.FindObjectOfType<GroundSpawn>();  
         SpawnDiamonds();  
-        SpawnObstacle();
-        SpawnSpringObstacle();
-        SpawnBumperObstacle();
+        //SpawnObstacle();
+        //SpawnSpringObstacle();
+        //SpawnBumperObstacle();
     }
 
     private void OnTriggerExit (Collider other)
     {
-        gs.SpawnTile();
+        gs.SpawnTile(true);
         // Destroy extra tiles after player leaves collider
         Destroy(gameObject);
     }
@@ -60,13 +60,7 @@ public class groundTile : MonoBehaviour
         point.y = 0.4f;
         return point;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-         
-    }
-
+    
     /*
         Spawning obstacles
     */
@@ -74,21 +68,21 @@ public class groundTile : MonoBehaviour
     public GameObject springObstaclePrefab;
     public GameObject bumperObstaclePrefab;
 
-    void SpawnObstacle()
+    public void SpawnObstacle()
     {
         int obstacleSpawnIndex = Random.Range(4, 7);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         Instantiate(obstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
     }
 
-    void SpawnSpringObstacle()
+    public void SpawnSpringObstacle()
     {   
         int obstacleSpawnIndex = Random.Range(7, 10);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         Instantiate(springObstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
     }
 
-    void SpawnBumperObstacle()
+     public void SpawnBumperObstacle()
     {   
         int obstacleSpawnIndex = Random.Range(14, 17);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
