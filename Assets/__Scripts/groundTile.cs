@@ -17,6 +17,7 @@ public class groundTile : MonoBehaviour
         SpawnDiamonds();  
         SpawnObstacle();
         SpawnSpringObstacle();
+        SpawnBumperObstacle();
     }
 
     private void OnTriggerExit (Collider other)
@@ -71,6 +72,7 @@ public class groundTile : MonoBehaviour
     */
     public GameObject obstaclePrefab; 
     public GameObject springObstaclePrefab;
+    public GameObject bumperObstaclePrefab;
 
     void SpawnObstacle()
     {
@@ -81,9 +83,16 @@ public class groundTile : MonoBehaviour
 
     void SpawnSpringObstacle()
     {   
-        int obstacleSpawnIndex = Random.Range(7, 8);
+        int obstacleSpawnIndex = Random.Range(7, 10);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         Instantiate(springObstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
-    
+    }
 
-}}
+    void SpawnBumperObstacle()
+    {   
+        int obstacleSpawnIndex = Random.Range(14, 17);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        Instantiate(bumperObstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
+        
+    }
+}
