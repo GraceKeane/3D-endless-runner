@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int score;
+    int score;
     public static GameManager inst;
     public Text scoreText;
+    // Increasing players speed 
+    [SerializeField] PlayerMovement playerMovement;
 
     public void IncrementScore()
     {
         score++;
         scoreText.text = "Score: " + score;
+        // Increasing the players spped as points goes up 
+        playerMovement.speed += playerMovement.speedIncrease;
     }
 
     public void Awake()
