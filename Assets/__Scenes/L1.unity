@@ -158,6 +158,7 @@ MonoBehaviour:
   speed: 5
   rb: {fileID: 506845330}
   horizontalMultiplier: 2
+  speedIncrease: 0.07
 --- !u!136 &506845332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1115,8 +1116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9d9b8c9a57c804c8e5760e76f85842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   scoreText: {fileID: 829589733}
+  playerMovement: {fileID: 506845331}
 --- !u!4 &1869319512
 Transform:
   m_ObjectHideFlags: 0

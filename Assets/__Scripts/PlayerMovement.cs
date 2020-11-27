@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     // Allowing the player to move faster left and right
     public float horizontalMultiplier = 2f;
 
+    public float speedIncrease = 0.1f;
+
     // Getting the player to move
     void FixedUpdate(){
         Vector3 forwardMove = transform.forward * speed * Time.fixedDeltaTime;
