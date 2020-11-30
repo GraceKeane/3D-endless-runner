@@ -58,6 +58,7 @@ public class LifeController : MonoBehaviour
             healthBar3.gameObject.SetActive (false);
             healthBar2.gameObject.SetActive (false);
             healthBar4.gameObject.SetActive (false);
+            
             // Game over if all lives are 0
             gameOver.gameObject.SetActive (true);
             Time.timeScale = 0;
