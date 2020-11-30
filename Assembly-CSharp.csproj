@@ -80,6 +80,8 @@
      <Compile Include="Assets\__Scripts\PDiamond.cs" />
      <Compile Include="Assets\__Scripts\PinballFollow.cs" />
      <Compile Include="Assets\__Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\__Scripts\QuitGame.cs" />
+     <Compile Include="Assets\__Scripts\StartButton.cs" />
      <Compile Include="Assets\__Scripts\Timer.cs" />
      <Compile Include="Assets\__Scripts\groundTile.cs" />
      <None Include="Assets\AurynSky\Arcades Pack 02\READ ME.txt" />

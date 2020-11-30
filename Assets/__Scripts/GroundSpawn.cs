@@ -26,7 +26,7 @@ public class GroundSpawn : MonoBehaviour
     void Start()
     {
         // Spawning the tile continuously
-        for (int i = 0; i < 30; i++){
+        for (int i = 0; i < 15; i++){
 
             if(i < 20){
                 SpawnTile(false);

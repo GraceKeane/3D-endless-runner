@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4464135353165662595}
   - component: {fileID: 4464135353165662592}
   - component: {fileID: -5380375411525567921}
+  - component: {fileID: 1482946938479650185}
+  - component: {fileID: -3094392965723309608}
   m_Layer: 0
   m_Name: HoleObstacle
   m_TagString: Untagged
@@ -96,3 +98,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1482946938479650185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464135353165662598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.99999994, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3094392965723309608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464135353165662598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b48827f40682274598f64bf0225f651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
