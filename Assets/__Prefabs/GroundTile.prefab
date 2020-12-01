@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5361356106845535811}
+  - component: {fileID: 8292228267166744120}
   m_Layer: 0
   m_Name: Obstacle spawn middle
   m_TagString: Untagged
@@ -30,6 +31,19 @@ Transform:
   m_Father: {fileID: 4419126072328063667}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8292228267166744120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264763097433857876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &901357564025757498
 GameObject:
   m_ObjectHideFlags: 0
@@ -54,7 +68,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901357564025757498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.51, y: 1.93, z: 0.76}
+  m_LocalPosition: {x: 2.89, y: 0, z: 2.55}
   m_LocalScale: {x: 0.7570784, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4419126072328063667}
@@ -99,6 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3671207732702761352}
+  - component: {fileID: 7635425472362237699}
   m_Layer: 0
   m_Name: Obstacle spawn left
   m_TagString: Untagged
@@ -120,6 +135,19 @@ Transform:
   m_Father: {fileID: 4419126072328063667}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7635425472362237699
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612709129346763129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2160728051338102131
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3685786189176991064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 1.83, z: 1.96}
+  m_LocalPosition: {x: 0.02, y: 0, z: 1.96}
   m_LocalScale: {x: 0.7570784, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4419126072328063667}
@@ -441,6 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4469710977510292175}
+  - component: {fileID: 4036532055731767932}
   m_Layer: 0
   m_Name: Obstacle spawn right
   m_TagString: Untagged
@@ -462,6 +491,19 @@ Transform:
   m_Father: {fileID: 4419126072328063667}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4036532055731767932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822967779192822752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6102946561146661222
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7649043338907459839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.88, y: 1.84, z: 2.88}
+  m_LocalPosition: {x: -1.88, y: 0, z: 2.88}
   m_LocalScale: {x: 0.7570784, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4419126072328063667}
