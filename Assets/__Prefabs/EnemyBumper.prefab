@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8145336296136170601}
   m_Layer: 0
   m_Name: EnemyBumper
-  m_TagString: Untagged
+  m_TagString: HoleObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

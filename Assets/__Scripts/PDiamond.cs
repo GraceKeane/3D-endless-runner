@@ -12,7 +12,7 @@ public class PDiamond : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check that the object we collided with is the player
-        if (other.gameObject.name != "Player")
+        if (other.gameObject.name != "AstroDude")
         {
             // Stop executing rest of the function if not player
             return;
@@ -23,11 +23,6 @@ public class PDiamond : MonoBehaviour
 
         // Destroy purple diamond that player just collided with 
         Destroy(gameObject);
-    }
-    // Start is called before the first frame update
-    private void Start()
-    {
-        
     }
 
     // Update is called once per frame

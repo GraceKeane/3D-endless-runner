@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2882132194518307948}
   - component: {fileID: 2755033083205556644}
   - component: {fileID: 2859457655121232696}
-  - component: {fileID: 2859457655121232699}
+  - component: {fileID: 2163090005037146345}
   m_Layer: 0
   m_Name: P_Diamond
   m_TagString: Untagged
@@ -114,13 +114,13 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2859038196314168194}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.1983311
   m_Height: 2.2793622
   m_Direction: 1
   m_Center: {x: -0.022504508, y: 0.12031922, z: -0.19482045}
---- !u!114 &2859457655121232699
+--- !u!114 &2163090005037146345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,7 +129,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2859038196314168194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1de98a0e18eb73c439fac4c1f5bdd5d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 877ae4e2738090c47bf88cbefd4572ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 90

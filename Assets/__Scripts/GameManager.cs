@@ -9,14 +9,14 @@ public class GameManager : MonoBehaviour
     public static GameManager inst;
     public Text scoreText;
     // Increasing players speed 
-    [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] PlayerController playercontroller;
 
     public void IncrementScore()
     {
         score++;
         scoreText.text = "Score: " + score;
         // Increasing the players spped as points goes up 
-        playerMovement.speed += playerMovement.speedIncrease;
+        playercontroller.speed += playercontroller.speedIncrease;
     }
 
     public void Awake()
