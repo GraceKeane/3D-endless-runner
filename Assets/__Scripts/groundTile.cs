@@ -24,7 +24,7 @@ public class groundTile : MonoBehaviour
     {
         gs.SpawnTile(true);
         // Destroy extra tiles after player leaves collider
-        Destroy(gameObject);
+        Destroy(gameObject, 10f);
     }
 
     public GameObject pDiamondPrefab;
