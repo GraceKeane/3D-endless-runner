@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4246402175029147036}
   - component: {fileID: 6960831054488560150}
   - component: {fileID: 7890764488995493116}
-  - component: {fileID: 3489610656769562277}
   - component: {fileID: 1770322036210759785}
   m_Layer: 0
   m_Name: SpringEnemy 1
@@ -28,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3577424818993016614}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: 0, y: 0.068691, z: 0.28844}
+  m_LocalScale: {x: 0.15, y: 0.10125001, z: 0.127509}
   m_Children:
   - {fileID: 6710074321408607366}
   m_Father: {fileID: 0}
@@ -90,18 +89,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3489610656769562277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3577424818993016614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b48827f40682274598f64bf0225f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &1770322036210759785
 CapsuleCollider:
   m_ObjectHideFlags: 0
