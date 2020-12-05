@@ -67,6 +67,7 @@ public class groundTile : MonoBehaviour
     public GameObject obstaclePrefab; 
     public GameObject springObstaclePrefab;
     public GameObject bumperObstaclePrefab;
+    public GameObject magnet;
 
     public void SpawnObstacle()
     {
@@ -82,11 +83,19 @@ public class groundTile : MonoBehaviour
         Instantiate(springObstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
     }
 
-     public void SpawnBumperObstacle()
+    public void SpawnBumperObstacle()
     {   
         int obstacleSpawnIndex = Random.Range(14, 17);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         Instantiate(bumperObstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
+        
+    }
+
+    public void SpawnPowerUpM()
+    {   
+        int obstacleSpawnIndex = Random.Range(17, 18);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        Instantiate(magnet,  spawnPoint.position, Quaternion.identity, transform);
         
     }
 }

@@ -72,9 +72,12 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\__Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\__Scripts\DiamondMove.cs" />
      <Compile Include="Assets\__Scripts\DiamondPickup.cs" />
      <Compile Include="Assets\__Scripts\GameManager.cs" />
      <Compile Include="Assets\__Scripts\GroundSpawn.cs" />
+     <Compile Include="Assets\__Scripts\MDiamond.cs" />
+     <Compile Include="Assets\__Scripts\Magnet.cs" />
      <Compile Include="Assets\__Scripts\PDiamond.cs" />
      <Compile Include="Assets\__Scripts\Pause.cs" />
      <Compile Include="Assets\__Scripts\PinballFollow.cs" />
