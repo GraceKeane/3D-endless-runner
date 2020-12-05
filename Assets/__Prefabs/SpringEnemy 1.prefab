@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1770322036210759785}
   m_Layer: 0
   m_Name: SpringEnemy 1
-  m_TagString: Untagged
+  m_TagString: HoleObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 1
   m_AngularDrag: 180
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
@@ -97,7 +97,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3577424818993016614}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 5.626123
   m_Height: 14.30163

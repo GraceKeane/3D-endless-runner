@@ -13,14 +13,15 @@ public class PlayerController : MonoBehaviour
     public float speedIncrease = 0.1f;
     public float speed = 5f;
     public Rigidbody rb;
-    public static GameObject currentPlantform;
 
-    void OnCollisionEnter(Collision Collision)
+    void OnCollisionEnter(Collision other)
     {
-        if(Collision.gameObject.tag == "HoleObstacle"){
+        if(other.gameObject.tag == "ob"){
             anim.SetTrigger("isDead");
+            Debug.Log("Dead");
         } else {
-            currentPlantform = Collision.gameObject;
+            Debug.Log("Not registering death");
+            //currentPlantform = other.gameObject;
         }
     }
 
@@ -36,12 +37,22 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isJumping", false);
     }
 
+    void StopMagic()
+    {
+        // Stop magic
+        anim.SetBool("isMagic", false);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
             anim.SetBool("isJumping", true);
+        }
+        else if(Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            anim.SetBool("isMagic", true);
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
