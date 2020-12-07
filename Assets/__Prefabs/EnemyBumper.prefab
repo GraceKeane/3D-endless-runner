@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8145336296136170601}
   m_Layer: 0
   m_Name: EnemyBumper
-  m_TagString: HoleObstacle
+  m_TagString: ob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 6913241225628911039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.88, y: 0.11394, z: 23.47}
-  m_LocalScale: {x: 0.46350002, y: 0.44419342, z: 0.4}
+  m_LocalScale: {x: 0.33551243, y: 0.5, z: 0.4}
   m_Children:
   - {fileID: 3513644631399866535}
   - {fileID: 1083986659474186975}
@@ -107,7 +107,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -122,8 +122,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1567748, y: 2.6810203, z: 2.4415255}
-  m_Center: {x: 0.044491224, y: 0.5203152, z: 0.0000023841858}
+  m_Size: {x: 2.1567748, y: 1.6183531, z: 1.0017824}
+  m_Center: {x: 0.04449113, y: -0.011018515, z: 0.0000023841858}
 --- !u!1 &7028014608270276334
 GameObject:
   m_ObjectHideFlags: 0

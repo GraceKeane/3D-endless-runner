@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5361356106845535811}
-  - component: {fileID: 8292228267166744120}
   m_Layer: 0
   m_Name: Obstacle spawn middle
   m_TagString: Untagged
@@ -31,19 +30,6 @@ Transform:
   m_Father: {fileID: 4419126072328063667}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8292228267166744120
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264763097433857876}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &901357564025757498
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +99,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3671207732702761352}
-  - component: {fileID: 7635425472362237699}
   m_Layer: 0
   m_Name: Obstacle spawn left
   m_TagString: Untagged
@@ -135,19 +120,6 @@ Transform:
   m_Father: {fileID: 4419126072328063667}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7635425472362237699
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612709129346763129}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2160728051338102131
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,13 +427,12 @@ MonoBehaviour:
   elapsedTime: 0
   pDiamondPrefab: {fileID: 2859038196314168194, guid: 47864e176ad61d441818ec50a2f09d52,
     type: 3}
-  obstaclePrefab: {fileID: 4464135353165662598, guid: 637831789b1b3604fb36ead2ce28aebb,
+  obstaclePrefab: {fileID: 5971735021903967861, guid: 15cd795e97e42e7458871ae6dff4acb4,
     type: 3}
   springObstaclePrefab: {fileID: 3577424818993016614, guid: 7aad56ee3c46abd4b9137d633a580ca2,
     type: 3}
   bumperObstaclePrefab: {fileID: 6913241225628911039, guid: d1912aa490e417d4aacd7aff029c2b32,
     type: 3}
-  magnet: {fileID: 0}
 --- !u!1 &4822967779192822752
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +442,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4469710977510292175}
-  - component: {fileID: 4036532055731767932}
   m_Layer: 0
   m_Name: Obstacle spawn right
   m_TagString: Untagged
@@ -493,19 +463,6 @@ Transform:
   m_Father: {fileID: 4419126072328063667}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4036532055731767932
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4822967779192822752}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6102946561146661222
 GameObject:
   m_ObjectHideFlags: 0

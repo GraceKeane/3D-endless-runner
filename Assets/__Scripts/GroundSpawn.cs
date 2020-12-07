@@ -18,7 +18,7 @@ public class GroundSpawn : MonoBehaviour
             temp.GetComponent<groundTile>().SpawnObstacle();
             temp.GetComponent<groundTile>().SpawnSpringObstacle();
             temp.GetComponent<groundTile>().SpawnBumperObstacle();
-            temp.GetComponent<groundTile>().SpawnPowerUpM();
+           // temp.GetComponent<groundTile>().SpawnPowerUpM();
         }
 
     }
