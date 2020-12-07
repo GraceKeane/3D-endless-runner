@@ -9,6 +9,7 @@ public class groundTile : MonoBehaviour
 
     public float secondsBetweenSpawn;
     public float elapsedTime = 0.0f;
+    public GameObject pDiamondPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +27,6 @@ public class groundTile : MonoBehaviour
         // Destroy extra tiles after player leaves collider
         Destroy(gameObject, 10f);
     }
-
-    public GameObject pDiamondPrefab;
     
     void SpawnDiamonds()
     {
@@ -67,7 +66,7 @@ public class groundTile : MonoBehaviour
     public GameObject obstaclePrefab; 
     public GameObject springObstaclePrefab;
     public GameObject bumperObstaclePrefab;
-    public GameObject magnet;
+   // public GameObject magnet;
 
     public void SpawnObstacle()
     {
@@ -91,11 +90,11 @@ public class groundTile : MonoBehaviour
         
     }
 
-    public void SpawnPowerUpM()
+   /* public void SpawnPowerUpM()
     {   
         int obstacleSpawnIndex = Random.Range(17, 18);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         Instantiate(magnet,  spawnPoint.position, Quaternion.identity, transform);
         
-    }
+    }*/
 }

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     Animator anim;
 
+    public static GameObject Player;
     // Allowing the player to move left and right
     float horizontalInput;
     // Allowing the player to move faster left and right
@@ -14,21 +15,23 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public Rigidbody rb;
 
-    void OnCollisionEnter(Collision other)
+
+    /*void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "ob"){
-            anim.SetTrigger("isDead");
-            Debug.Log("Dead");
+        if(other.gameObject.tag == "Cube"){
+            anim.SetTrigger("playerDead");
+            playerDead = true;
         } else {
-            Debug.Log("Not registering death");
-            //currentPlantform = other.gameObject;
+            currentPlatform = other.gameObject;
         }
-    }
+    }*/
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = this.GetComponent<Animator>();  
+        anim = this.GetComponent<Animator>(); 
+        // Getting rigidbody attached to player 
+        rb = this.GetComponent<Rigidbody>();
     }
 
     void StopJump()
@@ -49,6 +52,8 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
             anim.SetBool("isJumping", true);
+            // Allowing the rigidbody to move for jump
+            rb.AddForce(Vector3.up * 100);
         }
         else if(Input.GetKeyDown(KeyCode.DownArrow))
         {
