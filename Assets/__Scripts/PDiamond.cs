@@ -21,6 +21,8 @@ public class PDiamond : MonoBehaviour
         // Add to the player's score by collecting diamonds
         GameManager.inst.IncrementScore();
 
+        gameData.singleton.UpdateScore(1);
+
         // Destroy purple diamond that player just collided with 
         Destroy(gameObject);
     }

@@ -41,6 +41,8 @@ public class playerCollision : MonoBehaviour
 
    void Start()
    {
+       isDead = false;
+       
        // Getting the death animation
        anim = this.GetComponent<Animator>();
 
