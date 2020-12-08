@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class playerCollision : MonoBehaviour
 {
     Animator anim;
     public static bool isDead = false; 
     public PlayerController movement;
+    int livesLeft;
+    public Texture aliveIcon;
+    public Texture deadIcon;
+    public RawImage[] icons;
 
     void RestartGame()
     {
@@ -24,14 +29,29 @@ public class playerCollision : MonoBehaviour
 
             if (isDead)
             {
+                livesLeft--;
+                PlayerPrefs.SetInt("lives", livesLeft);
                 movement.enabled = false;
                 Invoke("RestartGame", 1);
 
                 anim.SetTrigger("isDead");
             }
-
-            //isDead = true;
         } 
    }
 
+   void Start()
+   {
+       // Getting the death animation
+       anim = this.GetComponent<Animator>();
+
+       livesLeft = PlayerPrefs.GetInt("lives");
+
+        for (int i = 0; i < icons.Length; i++)
+        {
+            if(i >= livesLeft)
+            {
+                icons[i].texture = deadIcon;
+            }
+        }
+   }
 }

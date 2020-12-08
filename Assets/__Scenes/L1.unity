@@ -2482,6 +2482,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1873775352}
+  aliveIcon: {fileID: 2800000, guid: c54878f4fc11f4523b564be2bee96ef1, type: 3}
+  deadIcon: {fileID: 2800000, guid: 7249870bad8524aea851852dc260add6, type: 3}
+  icons:
+  - {fileID: 940491280}
+  - {fileID: 135386303}
+  - {fileID: 1647489201}
+  - {fileID: 123637536}
 --- !u!65 &1873775357
 BoxCollider:
   m_ObjectHideFlags: 0
