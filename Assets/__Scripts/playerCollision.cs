@@ -1,10 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerCollision : MonoBehaviour
 {
     Animator anim;
     public static bool isDead = false; 
     public PlayerController movement;
+
+    void RestartGame()
+    {
+        SceneManager.LoadScene("L1", LoadSceneMode.Single);
+    }
 
    void OnCollisionEnter (Collision collisionInfo) 
    {
@@ -19,6 +25,8 @@ public class playerCollision : MonoBehaviour
             if (isDead)
             {
                 movement.enabled = false;
+                Invoke("RestartGame", 1);
+
                 anim.SetTrigger("isDead");
             }
 
