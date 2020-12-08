@@ -6,9 +6,8 @@ public class pickup : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Player")
-        {
-            Debug.Log("You picked up a diamond");
-        }
+        ScoreTextScript.diamondAmount += 1;
+        //Destroy (gameObject);
+    
     }
 }

@@ -36,7 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -71,6 +70,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <Compile Include="Assets\__Scripts\AnimationScript.cs" />
      <Compile Include="Assets\__Scripts\CameraFollow.cs" />
      <Compile Include="Assets\__Scripts\DiamondMove.cs" />
      <Compile Include="Assets\__Scripts\DiamondPickup.cs" />
@@ -84,6 +84,7 @@
      <Compile Include="Assets\__Scripts\PlayerController.cs" />
      <Compile Include="Assets\__Scripts\QuitGame.cs" />
      <Compile Include="Assets\__Scripts\RegisterScore.cs" />
+     <Compile Include="Assets\__Scripts\ScoreTextScript.cs" />
      <Compile Include="Assets\__Scripts\StartButton.cs" />
      <Compile Include="Assets\__Scripts\Timer.cs" />
      <Compile Include="Assets\__Scripts\gameData.cs" />
