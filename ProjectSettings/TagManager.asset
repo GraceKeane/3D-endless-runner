@@ -11,6 +11,7 @@ TagManager:
   - playerBubble
   - ob
   - Cube
+  - lives
   layers:
   - Default
   - TransparentFX
