@@ -13,6 +13,7 @@ public class playerCollision : MonoBehaviour
     public RawImage[] icons;
 
     public GameObject gameOverPanel;
+    public Text highScore;
 
     void RestartGame()
     {
@@ -79,6 +80,14 @@ public class playerCollision : MonoBehaviour
             {
                 icons[i].texture = deadIcon;
             }
+        }
+
+
+        if(PlayerPrefs.HasKey("highscore")){
+            highScore.text = "High Score: " + PlayerPrefs.GetInt("highscore");
+        }
+        else{
+            highScore.text = "High Score: 0";
         }
    }
 }
