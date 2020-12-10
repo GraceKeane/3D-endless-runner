@@ -12,6 +12,8 @@ public class playerCollision : MonoBehaviour
     public Texture deadIcon;
     public RawImage[] icons;
 
+    public GameObject gameOverPanel;
+
     void RestartGame()
     {
         SceneManager.LoadScene("L1", LoadSceneMode.Single);
@@ -21,7 +23,7 @@ public class playerCollision : MonoBehaviour
    {
        Debug.Log(collisionInfo.collider.name);
 
-       if(collisionInfo.collider.tag == "ob"){
+       if(collisionInfo.collider.tag == "ob" && !isDead){
             Debug.Log("HIT AN OBSTACLE");
         
             //movement.enabled = false;
@@ -31,8 +33,31 @@ public class playerCollision : MonoBehaviour
             {
                 livesLeft--;
                 PlayerPrefs.SetInt("lives", livesLeft);
+
                 movement.enabled = false;
+
+                if(livesLeft > 0){
                 Invoke("RestartGame", 1);
+                } else {
+                    icons[0].texture = deadIcon;
+                    gameOverPanel.SetActive(true);
+//////
+
+                    PlayerPrefs.SetInt("lastscore", PlayerPrefs.GetInt("score"));
+                    if(PlayerPrefs.HasKey("highscore"))
+                    {
+                        int hs = PlayerPrefs.GetInt("highscore");
+                        if(hs < PlayerPrefs.GetInt("score"))
+                        {
+                            PlayerPrefs.SetInt("highscore", PlayerPrefs.GetInt("score"));
+                        }
+                    }
+                     else {
+                            PlayerPrefs.SetInt("highscore", PlayerPrefs.GetInt("score"));
+                    }
+                    
+/////
+                }
 
                 anim.SetTrigger("isDead");
             }
