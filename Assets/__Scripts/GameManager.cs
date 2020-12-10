@@ -17,21 +17,34 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         // Increasing the players spped as points goes up 
         playercontroller.speed += playercontroller.speedIncrease;
+    
+
+        PlayerPrefs.SetInt("Score", 0);
     }
 
     public void Awake()
     {
         inst = this;
+        //PlayerPrefs.SetInt("Score", 0);
     }
+    
+   /* public void UpdateScore(int s)
+    {
+        score += s;
+        // Allowing the score to continue until all lives lost
+        PlayerPrefs.SetInt("Score", score);
+
+        if(scoreText != null){
+            scoreText.text = "Score: " +  score;
+        }
+    }
+*/
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Setting singleton for score text  to be equal to the text element
+        gameData.singleton.scoreText = this.GetComponent<Text>();
+        // Run game data and add 0 to it (updates display for score text)
+        gameData.singleton.UpdateScore(0);
     }
 }

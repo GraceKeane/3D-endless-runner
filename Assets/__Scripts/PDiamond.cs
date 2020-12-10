@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PDiamond : MonoBehaviour
 {
+
     // Allowing the diamond to rotate for visual effect
     public float turnSpeed = 90f;
 
@@ -20,16 +21,18 @@ public class PDiamond : MonoBehaviour
 
         // Add to the player's score by collecting diamonds
         GameManager.inst.IncrementScore();
-
+///
         gameData.singleton.UpdateScore(1);
 
         // Destroy purple diamond that player just collided with 
         Destroy(gameObject);
-    }
+        
+   }
 
     // Update is called once per frame
     private void Update()
     {
         transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
     }
+
 }

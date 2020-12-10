@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public float speedIncrease = 0.1f;
     public float speed = 5f;
     public Rigidbody rb;
+    float dirX;
+
+    [SerializeField] GameObject diamondMagnet;
 
 
     /*void OnCollisionEnter(Collision other)
@@ -69,5 +72,7 @@ public class PlayerController : MonoBehaviour
         Vector3 forwardMove = transform.forward * speed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
         rb.MovePosition(rb.position + forwardMove + horizontalMove);
+
+        diamondMagnet.transform.position = new Vector3(transform.position.x, transform.position.y);
     }
 }

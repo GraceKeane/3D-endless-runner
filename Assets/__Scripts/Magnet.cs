@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Magnet : MonoBehaviour
 {
+
     public GameObject DiamondDObj;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,7 +14,7 @@ public class Magnet : MonoBehaviour
         DiamondDObj.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
