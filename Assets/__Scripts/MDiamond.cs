@@ -5,7 +5,7 @@ using UnityEngine;
 public class MDiamond : MonoBehaviour
 {
     public Transform playerTransform;
-    public float moveSpeed = 17f;
+    public float moveSpeed = 2f;
     DiamondMove diamondMoveScript;
 
     // Start is called before the first frame update

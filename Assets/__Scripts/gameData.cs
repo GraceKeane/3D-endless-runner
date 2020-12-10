@@ -17,6 +17,7 @@ public class gameData : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
         DontDestroyOnLoad(this.gameObject);
         singleton = this;
 

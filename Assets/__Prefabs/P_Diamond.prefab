@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2882132194518307948}
   - component: {fileID: 2859457655121232696}
   - component: {fileID: 772450684984093101}
+  - component: {fileID: 4696565996943288196}
+  - component: {fileID: 8836508760440621724}
   m_Layer: 0
   m_Name: P_Diamond
   m_TagString: Untagged
@@ -108,3 +110,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 90
+--- !u!114 &4696565996943288196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859038196314168194}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b3c54ff37bed8479b53d1e7107d509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8836508760440621724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859038196314168194}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed955b5a5f7338448986291703619e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  moveSpeed: 2
