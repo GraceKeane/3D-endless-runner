@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public Rigidbody rb;
     float dirX;
+
+
+    public Text highScore;
 
     [SerializeField] GameObject diamondMagnet;
 
@@ -35,6 +39,18 @@ public class PlayerController : MonoBehaviour
         anim = this.GetComponent<Animator>(); 
         // Getting rigidbody attached to player 
         rb = this.GetComponent<Rigidbody>();
+
+
+        if(PlayerPrefs.HasKey("highscore")){
+            highScore.text = "High Score: " + PlayerPrefs.GetInt("highscore");
+        }
+        else{
+            highScore.text = "High Score: 0";
+        }
+
+
+
+
     }
 
     void StopJump()
