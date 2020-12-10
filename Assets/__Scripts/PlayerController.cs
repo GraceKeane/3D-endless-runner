@@ -73,6 +73,6 @@ public class PlayerController : MonoBehaviour
         Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
         rb.MovePosition(rb.position + forwardMove + horizontalMove);
 
-        diamondMagnet.transform.position = new Vector3(transform.position.x, transform.position.y);
+        //diamondMagnet.transform.position = new Vector3(transform.position.x, transform.position.y);
     }
 }

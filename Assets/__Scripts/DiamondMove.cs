@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DiamondMove : MonoBehaviour
 {
-    MDiamond MDiamondScript;
+  /*  MDiamond MDiamondScript;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +24,5 @@ public class DiamondMove : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 }
