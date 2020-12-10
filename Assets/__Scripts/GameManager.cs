@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         playercontroller.speed += playercontroller.speedIncrease;
     
 
-        PlayerPrefs.SetInt("Score", 0);
+       // PlayerPrefs.SetInt("Score", 0);
     }
 
     public void Awake()
@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour
     }
 */
     // Start is called before the first frame update
-    void Start()
+  /*  void Start()
     {
         // Setting singleton for score text  to be equal to the text element
         gameData.singleton.scoreText = this.GetComponent<Text>();
         // Run game data and add 0 to it (updates display for score text)
         gameData.singleton.UpdateScore(0);
-    }
+    }*/
 }

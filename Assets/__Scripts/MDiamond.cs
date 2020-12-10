@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MDiamond : MonoBehaviour
 {
-    public Transform playerTransform;
+  /*  public Transform playerTransform;
     public float moveSpeed = 2f;
     DiamondMove diamondMoveScript;
 
@@ -22,5 +22,5 @@ public class MDiamond : MonoBehaviour
         {
             diamondMoveScript.enabled = true;
         }
-    }
+    }*/
 }
