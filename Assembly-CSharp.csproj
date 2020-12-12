@@ -89,6 +89,8 @@
      <Compile Include="Assets\__Scripts\StartButton.cs" />
      <Compile Include="Assets\__Scripts\Statistics.cs" />
      <Compile Include="Assets\__Scripts\Timer.cs" />
+     <Compile Include="Assets\__Scripts\UpdateMusic.cs" />
+     <Compile Include="Assets\__Scripts\UpdateSound.cs" />
      <Compile Include="Assets\__Scripts\gameData.cs" />
      <Compile Include="Assets\__Scripts\groundTile.cs" />
      <Compile Include="Assets\__Scripts\mainMenuController.cs" />

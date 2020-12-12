@@ -41,13 +41,13 @@ public class PlayerController : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
 
 
-        if(PlayerPrefs.HasKey("highscore")){
+      /*  if(PlayerPrefs.HasKey("highscore")){
             highScore.text = "High Score: " + PlayerPrefs.GetInt("highscore");
         }
         else{
             highScore.text = "High Score: 0";
         }
-
+*/
 
 
 
@@ -73,6 +73,8 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isJumping", true);
             // Allowing the rigidbody to move for jump
             rb.AddForce(Vector3.up * 100);
+            // Play jump sound
+            playerCollision.sfx[4].Play();
         }
         else if(Input.GetKeyDown(KeyCode.DownArrow))
         {
