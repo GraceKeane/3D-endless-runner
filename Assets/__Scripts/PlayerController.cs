@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     Animator anim;
-
     public static GameObject Player;
     // Allowing the player to move left and right
     float horizontalInput;
@@ -16,41 +15,15 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public Rigidbody rb;
     float dirX;
-
-
     public Text highScore;
-
-    [SerializeField] GameObject diamondMagnet;
-
-
-    /*void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.tag == "Cube"){
-            anim.SetTrigger("playerDead");
-            playerDead = true;
-        } else {
-            currentPlatform = other.gameObject;
-        }
-    }*/
 
     // Start is called before the first frame update
     void Start()
     {
+        // Getting animation
         anim = this.GetComponent<Animator>(); 
         // Getting rigidbody attached to player 
         rb = this.GetComponent<Rigidbody>();
-
-
-      /*  if(PlayerPrefs.HasKey("highscore")){
-            highScore.text = "High Score: " + PlayerPrefs.GetInt("highscore");
-        }
-        else{
-            highScore.text = "High Score: 0";
-        }
-*/
-
-
-
     }
 
     void StopJump()
@@ -58,13 +31,7 @@ public class PlayerController : MonoBehaviour
         // Stop jumping
         anim.SetBool("isJumping", false);
     }
-
-    void StopMagic()
-    {
-        // Stop magic
-        anim.SetBool("isMagic", false);
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -75,10 +42,6 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * 100);
             // Play jump sound
             playerCollision.sfx[4].Play();
-        }
-        else if(Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            anim.SetBool("isMagic", true);
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
@@ -91,6 +54,5 @@ public class PlayerController : MonoBehaviour
         Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
         rb.MovePosition(rb.position + forwardMove + horizontalMove);
 
-        //diamondMagnet.transform.position = new Vector3(transform.position.x, transform.position.y);
     }
 }

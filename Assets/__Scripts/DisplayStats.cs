@@ -11,17 +11,23 @@ public class DisplayStats : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        // Saving the last score
         if(PlayerPrefs.HasKey("lastscore"))
         {
             lastScore.text = "Last Score: " + PlayerPrefs.GetInt("lastscore");
-        } else {
+        } else 
+        {
+            // Setting the last score to 0 if none before
             lastScore.text = "Last Score: 0";
         }
 
+        // Saving the high score
         if(PlayerPrefs.HasKey("highscore"))
         {
             highestScore.text = "Highest Score: " + PlayerPrefs.GetInt("highscore");
-        } else {
+        } else 
+        {
+            // Setting the last score to 0 if none before
             highestScore.text = "Highest Score: 0";
         }
 

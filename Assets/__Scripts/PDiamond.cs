@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Script to detect if the player runs into a purple diamond
-
 public class PDiamond : MonoBehaviour
 {
 
@@ -21,24 +20,18 @@ public class PDiamond : MonoBehaviour
 
         // Add to the player's score by collecting diamonds
         GameManager.inst.IncrementScore();
-
-        ///
-        // Playing pickup sound when diamond is picked up
+        // Play pickup sound when diamond is picked up
         playerCollision.sfx[5].Play();
-        ///
-
-///////
+        // Update the score in the gamedata
         gameData.singleton.UpdateScore(1);
-///////
-
         // Destroy purple diamond that player just collided with 
         Destroy(gameObject);
-        
    }
 
     // Update is called once per frame
     private void Update()
     {
+        // Rotate the diamonds
         transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
     }
 

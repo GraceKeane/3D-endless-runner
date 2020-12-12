@@ -6,7 +6,6 @@ public class groundTile : MonoBehaviour
 {
     GroundSpawn gs;
     Vector3 nextSpawnPoint;
-
     public float secondsBetweenSpawn;
     public float elapsedTime = 0.0f;
     public GameObject pDiamondPrefab;
@@ -14,16 +13,15 @@ public class groundTile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // On start - spawn ground and diamonds
         gs = GameObject.FindObjectOfType<GroundSpawn>();  
         SpawnDiamonds();  
-        //SpawnObstacle();
-        //SpawnSpringObstacle();
-        //SpawnBumperObstacle();
     }
 
     private void OnTriggerExit (Collider other)
     {
         gs.SpawnTile(true);
+
         // Destroy extra tiles after player leaves collider
         Destroy(gameObject, 10f);
     }
@@ -32,7 +30,9 @@ public class groundTile : MonoBehaviour
     {
         int diamondsToSpawn = 5;
 
-        for (int i = 0; i < diamondsToSpawn; i++){
+        for (int i = 0; i < diamondsToSpawn; i++)
+        {
+            // Spawing diamonds at a random point on ground
             GameObject temp = Instantiate(pDiamondPrefab, transform);
             temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
@@ -60,16 +60,18 @@ public class groundTile : MonoBehaviour
         return point;
     }
     
-    /*
-        Spawning obstacles
-    */
+    // Spawning obstacles
+    
+    // Initializing objects for obstacles
     public GameObject obstaclePrefab; 
     public GameObject springObstaclePrefab;
     public GameObject bumperObstaclePrefab;
-   // public GameObject magnet;
+
+    // Methods for 3 obstacles to spawn
 
     public void SpawnObstacle()
     {
+        // Gets  obstacle location on ground prefab
         int obstacleSpawnIndex = Random.Range(4, 7);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         Instantiate(obstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
@@ -89,12 +91,4 @@ public class groundTile : MonoBehaviour
         Instantiate(bumperObstaclePrefab,  spawnPoint.position, Quaternion.identity, transform);
         
     }
-
-   /* public void SpawnPowerUpM()
-    {   
-        int obstacleSpawnIndex = Random.Range(17, 18);
-        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-        Instantiate(magnet,  spawnPoint.position, Quaternion.identity, transform);
-        
-    }*/
 }
