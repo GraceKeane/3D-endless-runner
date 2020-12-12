@@ -11,7 +11,8 @@ public class playerCollision : MonoBehaviour
     public Texture aliveIcon;
     public Texture deadIcon;
     public RawImage[] icons;
-
+    // Array of sound effects
+    public static AudioSource[] sfx;
     public GameObject gameOverPanel;
     public Text highScore;
 
@@ -20,7 +21,7 @@ public class playerCollision : MonoBehaviour
         SceneManager.LoadScene("L1", LoadSceneMode.Single);
     }
 
-   void OnCollisionEnter (Collision collisionInfo) 
+   public void OnCollisionEnter (Collision collisionInfo) 
    {
        Debug.Log(collisionInfo.collider.name);
 
@@ -36,6 +37,9 @@ public class playerCollision : MonoBehaviour
                 PlayerPrefs.SetInt("lives", livesLeft);
 
                 movement.enabled = false;
+
+                // Play die sound
+                sfx[1].Play();
 
                 if(livesLeft > 0){
                 Invoke("RestartGame", 1);
@@ -65,12 +69,13 @@ public class playerCollision : MonoBehaviour
         } 
    }
 
-   void Start()
+   public void Start()
    {
        isDead = false;
        
        // Getting the death animation
        anim = this.GetComponent<Animator>();
+       sfx = GameObject.FindWithTag("gamedata").GetComponentsInChildren<AudioSource>();
 
        livesLeft = PlayerPrefs.GetInt("lives");
 
@@ -82,12 +87,25 @@ public class playerCollision : MonoBehaviour
             }
         }
 
-
+///
         if(PlayerPrefs.HasKey("highscore")){
             highScore.text = "High Score: " + PlayerPrefs.GetInt("highscore");
         }
         else{
             highScore.text = "High Score: 0";
         }
+        ///
    }
+
+    // Play foot step 1 animation
+    void FootStep1()
+    {
+        sfx[3].Play();
+    }
+
+    // Play foot step 2 animation
+    void FootStep2()
+    {
+        sfx[2].Play();
+    }
 }

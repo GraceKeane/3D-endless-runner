@@ -22,6 +22,11 @@ public class PDiamond : MonoBehaviour
         // Add to the player's score by collecting diamonds
         GameManager.inst.IncrementScore();
 
+        ///
+        // Playing pickup sound when diamond is picked up
+        playerCollision.sfx[5].Play();
+        ///
+
 ///////
         gameData.singleton.UpdateScore(1);
 ///////
