@@ -10,7 +10,9 @@ public class UpdateMusic : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        // Finding audio source on gamedata 
         AudioSource[] allAS = GameObject.FindWithTag("gamedata").GetComponentsInChildren<AudioSource>(); 
+        // 0 element in array is the main game music
         music.Add(allAS[0]);
 
         // Getting slider to set and save value

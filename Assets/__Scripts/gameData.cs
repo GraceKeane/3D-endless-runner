@@ -37,7 +37,8 @@ public class gameData : MonoBehaviour
         // Allowing the score to continue until all lives lost
         PlayerPrefs.SetInt("score", score);
 
-        if(scoreText != null){
+        if(scoreText != null)
+        {
             scoreText.text = "Score: " +  score;
         }
     }

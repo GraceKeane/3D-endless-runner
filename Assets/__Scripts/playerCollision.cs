@@ -18,40 +18,49 @@ public class playerCollision : MonoBehaviour
 
     void RestartGame()
     {
+        // Restart to the beginning of the game
         SceneManager.LoadScene("L1", LoadSceneMode.Single);
     }
 
    public void OnCollisionEnter (Collision collisionInfo) 
    {
+       // Print to console what hit
        Debug.Log(collisionInfo.collider.name);
 
        if(collisionInfo.collider.tag == "ob" && !isDead){
+
             Debug.Log("HIT AN OBSTACLE");
-        
             //movement.enabled = false;
             isDead = true;
 
             if (isDead)
             {
+                // Deplete lives if hit
                 livesLeft--;
                 PlayerPrefs.SetInt("lives", livesLeft);
-
+                // Turn movement off so player can move when dead
                 movement.enabled = false;
-
                 // Play die sound
                 sfx[1].Play();
 
-                if(livesLeft > 0){
-                Invoke("RestartGame", 1);
-                } else {
+                if(livesLeft > 0)
+                {
+                    // Calling RestartGame function if have lives remaining
+                    Invoke("RestartGame", 1);
+                } else 
+                {
+                    // Allow an ex to appear on last life when dead
                     icons[0].texture = deadIcon;
+                    // Play game over if dead
                     gameOverPanel.SetActive(true);
-//////
-
+                    // Setting the last score to the score just got
                     PlayerPrefs.SetInt("lastscore", PlayerPrefs.GetInt("score"));
+
+                    // Initializing the high score
                     if(PlayerPrefs.HasKey("highscore"))
                     {
                         int hs = PlayerPrefs.GetInt("highscore");
+
                         if(hs < PlayerPrefs.GetInt("score"))
                         {
                             PlayerPrefs.SetInt("highscore", PlayerPrefs.GetInt("score"));
@@ -60,10 +69,7 @@ public class playerCollision : MonoBehaviour
                      else {
                             PlayerPrefs.SetInt("highscore", PlayerPrefs.GetInt("score"));
                     }
-                    
-/////
                 }
-
                 anim.SetTrigger("isDead");
             }
         } 
@@ -75,6 +81,7 @@ public class playerCollision : MonoBehaviour
        
        // Getting the death animation
        anim = this.GetComponent<Animator>();
+       // Getting audio source
        sfx = GameObject.FindWithTag("gamedata").GetComponentsInChildren<AudioSource>();
 
        livesLeft = PlayerPrefs.GetInt("lives");
@@ -87,14 +94,6 @@ public class playerCollision : MonoBehaviour
             }
         }
 
-///
-        if(PlayerPrefs.HasKey("highscore")){
-            highScore.text = "High Score: " + PlayerPrefs.GetInt("highscore");
-        }
-        else{
-            highScore.text = "High Score: 0";
-        }
-        ///
    }
 
     // Play foot step 1 animation

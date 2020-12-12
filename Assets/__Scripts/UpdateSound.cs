@@ -12,7 +12,7 @@ public class UpdateSound : MonoBehaviour
     {
         AudioSource[] allAS = GameObject.FindWithTag("gamedata").GetComponentsInChildren<AudioSource>(); 
         
-        // Assigning all audio sources to sound volume slider
+        // Getting array of sound effects and Assigning all audio sources to sound volume slider
         for(int i = 1; i < allAS.Length; i++){
             sfx.Add(allAS[i]);
         }

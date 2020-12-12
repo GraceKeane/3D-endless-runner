@@ -1631,8 +1631,8 @@ MonoBehaviour:
   m_text: The aim of the game is to not get hit. To do this keep running, avoid all
     obstacles. You will have a certain amount of health. Get hit 4 times and you
     die. To move left and right and to avoid obstacles press the left or right keys.
-    To dive under an obstacle  press the down arrow. To jump press the up arrow.
-    Collect powerups and diamonds. The player with the highest score wins!
+    To jump press the up arrow. Collect diamonds with your hands. The player with
+    the highest score wins!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46209664383f9b54d934ee7023c4f6c4, type: 2}
   m_sharedMaterial: {fileID: -1717108326981141607, guid: 46209664383f9b54d934ee7023c4f6c4,
