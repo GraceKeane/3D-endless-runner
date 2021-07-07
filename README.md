@@ -12,8 +12,8 @@
 
 ## Main features
 - Jump, left, right player navigation/ animation
-- High score
+- High score recorder
 - Pause
 - Lives generator
-- Score (diamond pick-ups)
+- Score increment feature (diamond pick-ups)
 - Audio sound effects
