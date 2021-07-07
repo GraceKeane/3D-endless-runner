@@ -1,6 +1,8 @@
 <h1 align="center">
-    Game Play
+    3D Endless Runner Application 
 </h1>
+
+## Game Play
 
 <p align="center">
   <img src="./Images/game_play.png" width=600 height=250/>
